@@ -1,0 +1,370 @@
+#include <stdio.h> // Include the standard input/output library
+
+int main() {
+    // Your code here
+
+    return 0; // Indicate successful program execution
+}
+#include <stdio.h>
+
+int main() {
+    int num1, num2, sum;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    sum = num1 + num2;
+
+    printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+
+    return 0;
+}
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    char operator;
+    double num1, num2, result;
+
+    printf("Enter an operator (+, -, *, /, ^, s, c): ");
+    scanf(" %c", &operator);
+
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            printf("%.2lf + %.2lf = %.2lf", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%.2lf - %.2lf = %.2lf", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%.2lf * %.2lf = %.2lf", num1, num2, result);
+            break;
+        case '/':
+            if (num2 == 0) {
+                printf("Error: Division by zero!\n");
+            } else {
+                result = num1 / num2;
+                printf("%.2lf / %.2lf = %.2lf", num1, num2, result);
+            }
+            break;
+        case '^':
+            result = pow(num1, num2);
+            printf("%.2lf ^ %.2lf = %.2lf", num1, num2, result);
+            break;
+        case 's':
+            result = sin(num1);
+            printf("sin(%.2lf) = %.2lf", num1, result);
+            break;
+        case 'c':
+            result = cos(num1);
+            printf("cos(%.2lf) = %.2lf", num1, result);
+            break;
+        default:
+            printf("Error: Invalid operator\n");
+    }
+
+    return 0;
+" rel="stylesheet">
+piece-5120x2880-18352.jpg) no-repeat center center/cover;
+Subscription</a>
+photos/monkey-d-luffy.1920x1080.mp4'">Play</button>
+"Movie 2"><div class="movie-title">Movie 2</div></div></a>
+#include <stdio.h>
+#include <string.h>
+
+void encrypt(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len; i++) {
+        str[i] = str[i] + 3; // Shift each character by 3 positions
+    }
+}
+
+int main() {
+    char str[100];
+
+    printf("Enter the string: ");
+    fgets(str, 100, stdin);
+
+    encrypt(str);
+
+    printf("Encrypted string: %s\n", str);
+
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+// 1. Hello, World!
+void hello_world() {
+    printf("Hello, World!\n");
+}
+
+// 2. Sum of two numbers
+int sum(int a, int b) {
+    return a + b;
+}
+
+// 3. Factorial of a number
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+// 4. Fibonacci series
+void fibonacci(int n) {
+    int a = 0, b = 1, c;
+    printf("Fibonacci Series: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    printf("\n");
+}
+
+// 5. Check if a number is prime
+int is_prime(int n) {
+    if (n <= 1) {
+        return 0;
+    }
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+// 6. Reverse a string
+void reverse_string(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        char temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
+    }
+}
+
+// 7. Check if a string is palindrome
+int is_palindrome(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - i - 1]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+// 8. Find the largest element in an array
+int find_max(int arr[], int n) {
+    int max = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// 9. Find the smallest element in an array
+int find_min(int arr[], int n) {
+    int min = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+// 10. Sort an array in ascending order (Bubble Sort)
+void bubble_sort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+// 11. Sort an array in descending order (Selection Sort)
+void selection_sort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[min_idx];
+        arr[min_idx] = temp;
+    }
+}
+
+// 12. Search for an element in an array (Linear Search)
+int linear_search(int arr[], int n, int x) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == x) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// 13. Search for an element in an array (Binary Search)
+int binary_search(int arr[], int l, int r, int x) {
+    if (r >= l) {
+        int mid = l + (r - l) / 2;
+        if (arr[mid] == x) {
+            return mid;
+        }
+        if (arr[mid] > x) {
+            return binary_search(arr, l, mid - 1, x);
+        }
+        return binary_search(arr, mid + 1, r, x);
+    }
+    return -1;
+}
+
+// 14. Find the GCD of two numbers
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+// 15. Find the LCM of two numbers
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+// 16. Check if a number is a power of 2
+int is_power_of_2(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return (n & (n - 1)) == 0;
+}
+
+// 17. Swap two numbers without using a temporary variable
+void swap(int *a, int *b) {
+    *a = *a ^ *b;
+    *b = *a ^ *b;
+    *a = *a ^ *b;
+}
+
+// 18. Implement a stack using array
+#define MAX_SIZE 100
+int top = -1;
+int stack[MAX_SIZE];
+
+void push(int data) {
+    if (top >= MAX_SIZE - 1) {
+        printf("Stack Overflow\n");
+        return;
+    }
+    top++;
+    stack[top] = data;
+}
+
+int pop() {
+    if (top < 0) {
+        printf("Stack Underflow\n");
+        return -1;
+    }
+    int data = stack[top];
+    top--;
+    return data;
+}
+
+// 19. Implement a queue using array
+#define MAX_SIZE 100
+int front = -1, rear = -1;
+int queue[MAX_SIZE];
+
+void enqueue(int data) {
+    if (rear == MAX_SIZE - 1) {
+        printf("Queue Overflow\n");
+        return;
+    }
+    if (front == -1) {
+        front = 0;
+    }
+    rear++;
+    queue[rear] = data;
+}
+
+int dequeue() {
+    if (front == -1 || front > rear) {
+        printf("Queue Underflow\n");
+        return -1;
+    }
+    int data = queue[front];
+    front++;
+    if (front > rear) {
+        front = rear = -1;
+    }
+    return data;
+}
+
+// 20. Implement a linked list
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+struct Node *head = NULL;
+
+void insert_at_beginning(int data) {
+    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = head;
+    head = new_node;
+}
+
+void insert_at_end(int data) {
+    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = NULL;
+    if (head == NULL) {
+        head = new_node;
+        return;
+    }
+    struct Node *temp = head;
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+    temp->next = new_node;
+}
+
+void delete_at_beginning() {
+    if (head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    struct Node *temp = head;
+    head = head->next;
+    free(temp);
+}
+
+void delete_at_end() {
+    if (head == NULL) {
+        printf("List is empty")
